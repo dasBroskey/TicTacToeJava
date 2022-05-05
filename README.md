@@ -11,19 +11,19 @@ new technology that can adapt to a busy lifestyle.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+Visual Studio Code was used with the Java language to create this software with java.until and java.io libraries to utilize lists.
 
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [Sam's development blog](https://samderlust.com/dev-blog/java/write-read-arraylist-object-file-java)
+* [Documentation guide](https://docs.oracle.com/en/)
 
 # Future Work
+Fixes:
+* Unchecked cast from read file
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+Items to be added or improved:
+* Handle input errors
+* Multiple players on different computers
+* Mulitple save files
