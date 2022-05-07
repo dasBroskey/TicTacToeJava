@@ -22,8 +22,10 @@ Visual Studio Code was used with the Java language to create this software with 
 # Future Work
 Fixes:
 * Unchecked cast from read file
+* Update variable names to be consistant
 
 Items to be added or improved:
 * Handle input errors
 * Multiple players on different computers
 * Mulitple save files
+* Window to play
