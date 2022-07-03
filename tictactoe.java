@@ -99,7 +99,7 @@ public class tictactoe {
             e.printStackTrace();
         }
     }
-    public static List readGame(){
+    public static List<String> readGame(){
         try{
             FileInputStream readData = new FileInputStream("tictactoe.ser");
             ObjectInputStream readStream = new ObjectInputStream(readData);
