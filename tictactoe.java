@@ -23,7 +23,7 @@ public class tictactoe {
         }
         return newBoard;
     }
-    public static void displayGrid(List board){
+    public void displayGrid(List board){
         for (int i=1;i<10;i++){
             if (i%3 != 0){
                 if (!(board.get(i-1).equals("BLANK"))){
@@ -50,7 +50,7 @@ public class tictactoe {
             }
         }
     }
-    public static boolean is_winner(List board){
+    public  boolean is_winner(List board){
         //Check rows
         for (int r=0;r<3;r++){
             if (!(board.get(r*3).equals("BLANK")) && ((board.get((r*3)+1).equals(board.get((r*3)))) && (board.get((r*3)+2).equals(board.get((r*3)))))){
@@ -72,21 +72,21 @@ public class tictactoe {
         }
         return false;
     }
-    public static String is_turn(List board){
+    public String is_turn(List board){
         if (Collections.frequency(board,"BLANK")%2 == 0){
             return "O";
         }else{
             return "X";
         }
     }
-    public static boolean is_blank(List board,int square){
+    public boolean is_blank(List board,int square){
         if (board.get(square).equals("BLANK")){
             return true;
         }else{
             return false;
         }
     }
-    public static void save(List board){
+    public void save(List board){
         try{
             FileOutputStream writeData = new FileOutputStream("tictactoe.ser");
             ObjectOutputStream writeStream = new ObjectOutputStream(writeData);
@@ -117,16 +117,27 @@ public class tictactoe {
         }
          
     }
-    public static int get_square(List board){
+    public int get_square(List board){
         Scanner listen = new Scanner(System.in);
         System.out.println("Which square will you place "+is_turn(board)+" in? ");
         int place = listen.nextInt();
         return (place-1);
     }
-    public static List<String> update_board(List board, int square){
+    public List<String> update_board(List board, int square){
         if (is_blank(board,square)){
             board.set(square,is_turn(board));
         }
         return board;
     }
+    public static boolean saving(int keys){
+        if (keys == 0){
+            return false;
+        }else{
+            return true;
+        }
+    }
+    public void keyReleased(int VK_ACCEPT){
+
+    }
 }
+//Change scanner to nexline and return string then change later in cokde before used
